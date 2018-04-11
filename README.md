@@ -1,5 +1,4 @@
 # colorize
-[![Releases](https://img.shields.io/github/colorize/jlinoff/csdiff.svg?style=flat)](https://github.com/jlinoff/colorize/releases)
 
 Colorize piped output to hightlight specific strings
 
