@@ -12,7 +12,7 @@ Here is how it could be used.
 $ cat -n log | colorize "error:|note:|warning:"
 ```
 
-Note that this different that using the `--color` option in tools like `grep`
+Note that this different than using the `--color` option in tools like `grep`
 because nothing is filtered.
 
 The regular expression syntax is the regular golang regular
