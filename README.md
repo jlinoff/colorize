@@ -35,6 +35,12 @@ $ cat -n log | colorize -c "red+bold,green" "error:|note:|warning:" '\"[^\"]*\"'
 
 There is more information about color maps in the *COLOR MAP* section.
 
+### Example
+```bash
+$ bin/native/colorize  -i /tmp/make.log -c red+bold,green,red+bold 'error:.*$|note:.*$|warning:.*$' "'[^']*'" '^.*errors generated'
+```
+![screen shot 2018-04-12 at 10 55 12 am](https://user-images.githubusercontent.com/2991242/38695130-3c57fce8-3e40-11e8-9c6f-048f8e338df6.png)
+
 ### Options
 
 | Short | Long | Description |
