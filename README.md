@@ -60,7 +60,7 @@ and want to color matches to the first one in green and matches to
 the second one in blue you would do this.
 
 ```bash
-$ cat logfile | %[4]v -c green+bold,blue+bold 'patern1' 'pattern2'
+$ cat logfile | colorize -c green+bold,blue+bold 'patern1' 'pattern2'
 ```
 
 If the color map (-c) is not specified all matches will be in red+bold
