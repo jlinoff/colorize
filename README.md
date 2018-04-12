@@ -21,7 +21,7 @@ https://github.com/google/re2/wiki/Syntax.
 It is written go-1.10. It has been tested on Mac and Linux systems.
 
 ### Usage
-In the simplest case, simply the program with a list of patterns to
+In the simplest case, simply run the program with a list of patterns to
 patch and pipe input to it as shown in the initial example.
 
 The color of each pattern can specified independently using a color
