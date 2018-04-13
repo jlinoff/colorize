@@ -119,8 +119,8 @@ Here are some more examples of what can be done with the short cuts.
 1. First pattern is normal red on a normal green background.
 
 ### Anlyzing a colorized bufer in emacs
-Add the following code to your ~/.emacs` file.
-```
+Add the following code to `~/.emacs`.
+```lisp
 ;; colorize ansi term sequences
 (require 'ansi-color)
 (defun ansi-colorize ()
