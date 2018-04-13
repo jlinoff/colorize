@@ -1,7 +1,7 @@
 # colorize
 [![Releases](https://img.shields.io/github/release/jlinoff/colorize.svg?style=flat)](https://github.com/jlinoff/colorize/releases)
 
-Colorize unstructured text to hightlight specific strings
+Colorize unstructured text to hightlight specific strings for an ANSI terminal
 
 This simple little program is useful for highlighting specific items
 that may help debugging issues in log files.
@@ -117,3 +117,22 @@ Here are some more examples of what can be done with the short cuts.
 
 #### -c 'red+greenB'
 1. First pattern is normal red on a normal green background.
+
+### Anlyzing a colorized bufer in emacs
+Add the following code to your ~/.emacs` file.
+```
+;; colorize ansi term sequences
+(require 'ansi-color)
+(defun ansi-colorize ()
+  "Colorize ansi escape sequences in the current buffer."
+  (interactive)
+  (ansi-color-apply-on-region (point-min) (point-max)))
+```
+
+Write the colorized log data to a separate log.
+```bash
+$ make 2>&1 /tmp/log
+$ colorize -i /tmp/log -c red+bold,blue+bold,green+bol 'error:|warning:' 'note:' "'[^']*'" > /tmp/logc
+```
+
+Bring `/tmp/logc` up in emacs and run the `ansi-colorize` function.
